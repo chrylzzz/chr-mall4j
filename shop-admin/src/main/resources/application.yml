@@ -8,6 +8,7 @@ spring:
       max-file-size: 100MB
       max-request-size: 100MB
       enabled: true
+
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
@@ -26,3 +27,6 @@ mybatis-plus:
       field-strategy: NOT_NULL
       # 默认数据库表下划线命名
       table-underline: true
+#server:
+#  servlet:
+#    context-path: /apis
