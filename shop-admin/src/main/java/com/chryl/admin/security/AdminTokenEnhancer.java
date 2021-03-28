@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * token增强
+ * token增强:登陆成功后,返回信息的增强
  * @author LGH
  */
 @Component

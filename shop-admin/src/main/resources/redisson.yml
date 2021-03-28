@@ -4,7 +4,8 @@ singleServerConfig:
 #  address: redis://192.168.228.128:6379
   database: 0
 #  password: null
-  password: 123456
+#  password: 123456
+  password:
   idleConnectionTimeout: 10000
   pingTimeout: 1000
   connectTimeout: 10000

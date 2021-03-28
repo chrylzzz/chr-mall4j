@@ -30,6 +30,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
     @Autowired
     private LoginAuthenticationFilter loginAuthenticationFilter;
 
+    // 1
     @Override
     public void configure(HttpSecurity http) throws Exception {
         // @formatter:off

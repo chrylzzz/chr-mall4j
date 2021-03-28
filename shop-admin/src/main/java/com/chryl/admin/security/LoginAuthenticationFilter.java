@@ -38,6 +38,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
+ * 登录先进入过滤器
  * 管理员登陆：
  *       post: http://127.0.0.1:8085/login
  *       {principal:username,credentials:password}
@@ -49,13 +50,15 @@ public class LoginAuthenticationFilter extends AbstractAuthenticationProcessingF
 
     private PasswordEncoder passwordEncoder;
 
+    // 0
     @Autowired
     public LoginAuthenticationFilter(YamiUserDetailsService yamiUserDetailsService, PasswordEncoder passwordEncoder) {
-        super("/login");
+        super("/login");//登录过滤的地址配置,默认 oauth/token
         this.yamiUserDetailsService = yamiUserDetailsService;
         this.passwordEncoder = passwordEncoder;
     }
 
+    // 2
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         if (!ServletUtil.METHOD_POST.equals(request.getMethod())) {
